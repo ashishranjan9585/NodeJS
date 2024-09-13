@@ -7,7 +7,8 @@
 
 # Some Asynchronous Concepts
 #### 1. `fetch()` Method
-It is a Web API provided by the browser. `fetch()` is neither a library nor a module; it is a native browser API provided by modern web browsers for making HTTP requests.It is commonly used to interact with web APIs and fetch data asynchronously.
+- It is a Web API provided by the browser. `fetch()` is neither a library nor a module;
+- it is a native browser API provided by modern web browsers for making HTTP requests.It is commonly used to interact with web APIs and fetch data asynchronously.
 
 Here's a breakdown of what the `fetch()` method is and why it's used:
 
