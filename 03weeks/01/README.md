@@ -24,3 +24,47 @@ Thing of a hospital where there's a doctor, patients waiting in line, and a few 
   - **Built-in middleware:** Provided by Express, such as `express.json()` and `express.static()`.
   - **Third-party middleware:** Created by the community, such as body-parser, morgan, etc.
     
+#### Example 1.
+```javascript
+ const express = require('express')
+const app = express()
+
+app.get('/" , (req , res) => {
+  res.send('Hello World!')
+})
+app.listen(3000)
+```
+#### Example 2.
+```javascript
+ const express = require('express');
+const app = express();
+
+// Application-level middleware
+app.use((req, res, next) => {
+  console.log('Time:', Date.now());
+  next();
+});
+
+// Route-specific middleware
+const checkUser = (req, res, next) => {
+  if (req.query.user === 'admin') {
+    next();
+  } else {
+    res.status(403).send('Forbidden');
+  }
+};
+
+app.get('/admin', checkUser, (req, res) => {
+  res.send('Welcome Admin!');
+});
+
+// Error-handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+```
