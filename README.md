@@ -534,15 +534,16 @@ Promises are essential for handling asynchronous code in a clean and readable wa
 - **Purpose:** Express is a web application framework for Node.js, designed to simplify the process of building web applications and APIs.
 - **Routing:** Express provides a powerful routing mechanism that allows you to define how your application responds to different HTTP requests (e.g., GET, POST).
 **3.HTTP Methods:**
-
 - `GET`: Used to retrieve data from the server. Typically used for reading information.
 - `POST`: Used to submit data to the server. Often used for creating or updating resources.
 - Other Methods (PUT, DELETE, etc.): Used for various purposes, such as updating or deleting resources.
+  
 **4.Routes:**
 
 **Definition:** 
 - `Routes` define the paths in your application and the HTTP methods they respond to.
 - `Parameters`: Routes can have parameters that allow dynamic handling of different values.
+  
 **5.Request and Response Objects:**
 
 - **Request (req):** Represents the incoming HTTP request from the client. Contains information about the request, such as parameters, headers, and body.
